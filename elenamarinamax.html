@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Елена Ма'рина — маркетолог-стратег: маркетинг с нуля для экспертов и бизнеса</title>
+<meta name="description" content="Выстрою систему маркетинга с нуля: позиционирование, связки, каналы, продажи. Помогаю экспертам и бизнесу получить стабильный поток клиентов. Консультация в МАХ.">
+<style>
+:root{--blue:#1F4E9C;--accent:#8EC1FF;--bg1:#071A3D;--bg2:#10346F;--card:rgba(255,255,255,.08);--line:rgba(142,193,255,.28);--light:rgba(255,255,255,.08);--text:#FFFFFF;--head:64px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--head)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%) fixed;background-color:var(--bg1);line-height:1.55;font-size:18px}
+p{margin:0 0 12px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header{position:-webkit-sticky;position:sticky;top:0;z-index:100;background:rgba(7,26,61,.97);border-bottom:2px solid var(--accent);transition:box-shadow .2s,background .2s}
+header.scrolled{background:rgba(7,26,61,.75);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 4px 14px rgba(0,0,0,.35)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px}
+.brand{font-weight:700;line-height:1.2;color:#fff;text-decoration:none}
+.brand small{display:block;font-weight:400;font-size:13px;color:#C9DDF7}
+.btn{display:inline-block;background:#fff;color:var(--blue);box-shadow:0 6px 18px rgba(0,0,0,.35);text-decoration:none;font-weight:700;padding:16px 32px;border-radius:999px;text-align:center;transition:background .2s}
+.btn:hover{background:#DCE9FA;color:#16397a}
+header .btn{padding:10px 16px;font-size:15px}
+main{padding:12px 0}
+section{padding:28px 0;margin:14px 12px;border-radius:28px;background:rgba(255,255,255,.05);border:1px solid var(--line);overflow:hidden}
+@media(min-width:960px){section{max-width:936px;margin:14px auto}}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.2;margin:0 0 12px;color:#fff}
+h2{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 6px;color:#fff}
+.sub{font-size:20px;color:#DCE9FA;margin:0 0 16px}
+.hero{display:grid;grid-template-columns:1fr 280px;gap:28px;align-items:center}
+.photo{width:100%;aspect-ratio:4/5;border-radius:22px;background:var(--card);border:1px solid var(--line);overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.note{font-size:16px;margin:0 0 16px}
+.cta{margin-top:18px;text-align:center}
+.hero-btn{text-align:center}
+ul.pain{list-style:none;padding:0;margin:16px 0 0}
+ul.pain li{padding:12px 16px 12px 52px;margin-bottom:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;position:relative}
+ul.pain li::before{content:"";position:absolute;left:18px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--accent)}
+blockquote{margin:16px 0;padding:6px 0 6px 20px;border-left:5px solid var(--accent);font-size:20px;font-style:italic}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0}
+.chain span{background:#2F7BEA;color:#fff;padding:8px 14px;border-radius:999px;font-size:15px;font-weight:600}
+.chain i{color:var(--accent);font-style:normal;font-weight:700}
+.elements{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+.el{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 8px;text-align:center;font-weight:600;font-size:15px}
+.el .ico{display:block;margin:0 auto 6px;width:36px;height:36px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.step{background:var(--card);border:2px solid var(--accent);border-radius:20px;padding:14px}
+.step .ico{display:block;width:40px;height:40px;margin-bottom:6px}
+.step b{display:block;color:var(--accent);margin-bottom:4px}
+.step em{display:block;font-style:normal;font-size:15px}
+.case{margin:0 0 12px}
+.case li{margin-bottom:6px}
+.result{background:var(--card);border-left:5px solid var(--accent);border-radius:18px;padding:16px 18px;margin:14px 0}
+.disclaimer{font-size:14px;color:#C9DDF7}
+.final{text-align:center;background:linear-gradient(135deg,#1B4FA8,#10346F)}
+footer{padding:24px 0 80px}
+.portfolio{background:var(--card);border:2px solid var(--accent);border-radius:24px;padding:20px;text-align:center}
+.portfolio a.pf{color:var(--accent);font-weight:700;font-size:20px}
+@media(max-width:700px){
+body{font-size:17px}
+.hero{grid-template-columns:1fr}
+.photo{max-width:240px;margin:0 auto;order:-1}
+.steps{grid-template-columns:1fr}
+.elements{grid-template-columns:repeat(2,1fr)}
+.btn{display:block;width:100%}
+header .btn{display:inline-block;width:auto}
+header .brand small{display:none}
+}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.visible{opacity:1;transform:none}
+.js .reveal .steps .step,.js .reveal .elements .el,.js .reveal ul.pain li{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.visible .steps .step,.js .reveal.visible .elements .el,.js .reveal.visible ul.pain li{opacity:1;transform:none}
+.js .reveal.visible .step:nth-child(2),.js .reveal.visible .el:nth-child(2),.js .reveal.visible ul.pain li:nth-child(2){transition-delay:.12s}
+.js .reveal.visible .step:nth-child(3),.js .reveal.visible .el:nth-child(3),.js .reveal.visible ul.pain li:nth-child(3){transition-delay:.24s}
+.js .reveal.visible .el:nth-child(4),.js .reveal.visible ul.pain li:nth-child(4){transition-delay:.36s}
+.js .reveal.visible ul.pain li:nth-child(5){transition-delay:.48s}
+@media(prefers-reduced-motion:reduce){.js .reveal,.js .reveal *{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="#hero">Елена Ма'рина<small>Маркетолог, стратег, контент-продюсер</small></a>
+<a class="btn" href="https://max.ru/u/f9LHodD0cOLNyE2y8X6s86J5ogxZvaPSxZHehWrsSyhQHEC4RmhzFvAG6RY?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Напишите мне в МАХ</a>
+</div></header>
+<main>
+
+<section id="hero"><div class="wrap hero">
+<div>
+<h1>Выстрою маркетинг с нуля — чтобы клиенты приходили по понятной системе</h1>
+<p class="sub">Я Елена Ма'рина, маркетолог, стратег и контент-продюсер. Помогаю малому бизнесу и экспертам решить проблему с привлечением клиентов и получить стабильный поток клиентов с помощью выстроенной системы и связок.</p>
+<p class="note">Работаю онлайн. Первая консультация — в течение суток.</p>
+<div class="hero-btn"><a class="btn" href="https://max.ru/u/f9LHodD0cOLNyE2y8X6s86J5ogxZvaPSxZHehWrsSyhQHEC4RmhzFvAG6RY?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Напишите мне в МАХ</a></div>
+</div>
+<div class="photo"><img src="img/elenamarina/elenamarina.jpeg" alt="Елена Ма'рина, маркетолог-стратег"></div>
+</div></section>
+
+<section id="pain" class="reveal"><div class="wrap">
+<h2>Знакомо?</h2>
+<p class="sub">Если вы узнали себя хотя бы в одном пункте — нам есть о чём поговорить.</p>
+<ul class="pain">
+<li>У вас есть продукт или экспертиза, но клиентов нет или приходят случайно.</li>
+<li>Вы пробовали рекламу и соцсети, а результат не складывается в понятную картину.</li>
+<li>Вы не понимаете, какое действие приведёт к продаже, и не можете спрогнозировать доход.</li>
+<li>Продажи держатся на сарафанном радио — а в сложное время оно перестаёт работать.</li>
+<li>Вы чувствуете, что где-то «затык», но не понимаете, где именно.</li>
+</ul>
+<div class="cta"><a class="btn" href="https://max.ru/u/f9LHodD0cOLNyE2y8X6s86J5ogxZvaPSxZHehWrsSyhQHEC4RmhzFvAG6RY?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Разобраться вместе — напишите мне в МАХ</a></div>
+</div></section>
+
+<section id="cause" class="reveal"><div class="wrap">
+<h2>Дело не в рекламе. Дело в отсутствии системы</h2>
+<p class="sub">Маркетинг — это не набор разрозненных действий.</p>
+<p>Для меня маркетинг — это выстраивание системы, которая приводит к продажам. Это связки: последовательность действий от первого касания, когда человек узнал о вас, до оплаты.</p>
+<div class="chain"><span>Первое касание</span><i>→</i><span>Контакт</span><i>→</i><span>Консультация</span><i>→</i><span>Продукт под запрос</span><i>→</i><span>Оплата</span></div>
+<p>Пока системы нет, каждое действие работает само по себе. Реклама есть, соцсети есть, а чёткого пути от «узнал» до «купил» нет.</p>
+<p>Иногда причина вообще не там, где её ищут. В одном из проектов мне казалось, что проблема в цене или в продукте. Когда мы поговорили с клиентами, оказалось: людей смущала не цена и не качество. Их смущало, как они будут продавать эту услугу дальше. Одно найденное препятствие — и открылся путь к продажам.</p>
+<blockquote>«Ты на основании одного механизма — раз, и раскрывается препятствие, которое не давало двигаться дальше. Его оказывается очень легко обойти.»</blockquote>
+</div></section>
+
+<section id="method" class="reveal"><div class="wrap">
+<h2>Как я работаю: от позиционирования до продаж</h2>
+<p class="sub">Система, которая приносит деньги.</p>
+<p>Я начинаю с позиционирования: кто вы, для кого и чем сильны. Затем выстраиваю всю систему — от продуктовой линейки до каналов, через которые вы будете продавать.</p>
+<p>В основе моего метода пять элементов: продукт, оффер, канал продаж и закрытие сделки. <!-- УТОЧНИТЬ У ЭКСПЕРТА: точный список «пяти единиц» --></p>
+<div class="elements">
+<div class="el"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg>Продукт</div>
+<div class="el"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>Оффер</div>
+<div class="el"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l14-6v14L3 13z"/><path d="M7 13v5a2 2 0 0 0 4 0v-3"/><path d="M20 9v6"/></svg>Канал продаж</div>
+<div class="el"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>Закрытие сделки</div>
+</div>
+<p>Что вы получаете в идеале: прогнозируемый доход от прозрачного набора действий. Вы понимаете: делаю раз, два, три, четыре, пять — и могу прогнозировать результат.</p>
+<p>Я не продаю «самое дорогое, что у меня есть». Сначала — знакомство и переписка, затем консультация, и только по её итогам предлагаю тот продукт, который вам действительно нужен.</p>
+<div class="steps">
+<div class="step"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1.1-4.3A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg><b>1. Консультация</b><em>От одного дня</em></div>
+<div class="step"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V5M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/><path d="M16 8h3v3"/></svg><b>2. Маркетинговая стратегия</b><em>Несколько дней (до трёх)</em></div>
+<div class="step"><svg class="ico" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8EC1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>3. Сопровождение</b><em>Сначала аналитика 3–4 дня, затем расписанные шаги; длится столько, сколько нужно вам</em></div>
+</div>
+<p>Формат — онлайн. Офлайн у меня только съёмочный процесс.</p>
+<div class="cta"><a class="btn" href="https://max.ru/u/f9LHodD0cOLNyE2y8X6s86J5ogxZvaPSxZHehWrsSyhQHEC4RmhzFvAG6RY?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Обсудить мой запрос в МАХ</a></div>
+</div></section>
+
+<section id="case" class="reveal"><div class="wrap">
+<h2>Из хаоса в стабильность: школа звукотерапии</h2>
+<p class="sub">Реальный проект, где система была построена с нуля.</p>
+<p>Когда меня пригласили на проект, там был полный хаос. В школе никогда не было маркетолога, она быстро теряла деньги: прежние связки и сарафан в кризис перестали работать.</p>
+<p><b>Что я сделала:</b></p>
+<ul class="case">
+<li>изучила нишу и бизнес-цифры, определила два сегмента и выбрала основной;</li>
+<li>выстроила каналы: соцсети и рекламу (Яндекс.Директ, таргет, ВК-реклама);</li>
+<li>через опрос клиентов нашла главное препятствие и сняла его скриптами продаж;</li>
+<li>добавила три онлайн-курса и встроила их в воронку вместе с офлайн-интенсивом;</li>
+<li>изменила позиционирование школы, сделала интернет-магазин и новый сайт;</li>
+<li>подключила продажников, которые допродают услуги на нужной стадии.</li>
+</ul>
+<div class="result"><b>Результат:</b> уже с первого месяца пошли системные продажи, и школа вышла на стабильные 3–4 млн рублей выручки в месяц. Система запущена за два месяца, активная фаза длилась пять месяцев. Сейчас я в поддерживающем формате: система работает, подключены отдельный SMM-специалист и продажники.</div>
+<p class="disclaimer">Результат относится к конкретному проекту и не является обещанием для других.</p>
+<div class="cta"><a class="btn" href="https://max.ru/u/f9LHodD0cOLNyE2y8X6s86J5ogxZvaPSxZHehWrsSyhQHEC4RmhzFvAG6RY?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Хочу так же разобрать мой проект — написать в МАХ</a></div>
+
+<h2 id="about" style="margin-top:32px">Кто я</h2>
+<p>Я Елена Ма'рина, маркетолог, стратег и контент-продюсер. Строю системы маркетинга с нуля для экспертов и малого бизнеса, делаю маркетинговые стратегии и веду каналы в соцсетях.</p>
+<p>Контент-продюсер — это маркетолог для соцсетей, который управляет производством контента, подбирает исполнителей и работает со стратегией, позиционированием и брендом. Круг задач шире, чем у SMM-менеджера.</p>
+<p>Моя сильная сторона — мегаадаптивность. Я работала в разных нишах, часто параллельно, и всегда нахожу подход. Лаконичность — результат сотен переговоров: я привыкла быстро и по делу объяснять, как могу помочь.</p>
+</div></section>
+
+<section id="final" class="final reveal"><div class="wrap">
+<h2>Начнём с одного сообщения</h2>
+<p class="sub">Опишите в МАХ, чем вы занимаетесь и где сейчас «зоны роста». Я отвечу и договорюсь с вами о консультации. Первая консультация — в течение суток.</p>
+<a class="btn" href="https://max.ru/u/f9LHodD0cOLNyE2y8X6s86J5ogxZvaPSxZHehWrsSyhQHEC4RmhzFvAG6RY?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Напишите мне в МАХ</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="portfolio">
+<p style="margin:0 0 8px">Посмотрите мои работы</p>
+<a class="pf" href="https://docs.google.com/presentation/d/1--sOfedgXxML9wfxG_-p9jNVF4uOHGFyAbw-yPSHIDg/edit?usp=sharing" target="_blank" rel="noopener">Портфолио Елены Ма'рины (презентация)</a>
+</div>
+</div></footer>
+<script>
+(function(){
+  var head=document.querySelector('header');
+  function onScroll(){head.classList.toggle('scrolled',window.pageYOffset>8)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href').slice(1);
+      var t=id?document.getElementById(id):document.body;
+      if(!t)return;
+      e.preventDefault();
+      var y=t.getBoundingClientRect().top+window.pageYOffset-(head?head.offsetHeight:0);
+      window.scrollTo({top:Math.max(0,y),behavior:reduce?'auto':'smooth'});
+      if(id&&history.pushState)history.pushState(null,'','#'+id);
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
