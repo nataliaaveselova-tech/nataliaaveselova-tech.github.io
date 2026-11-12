@@ -3,21 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Глубинное онлайн интервью для экспертов</title>
+<title>Интервью для экспертов: статья и ТЗ на лендинг | Н. Кажарова</title>
+<meta name="description" content="Глубинное интервью для экспертов: за 60–90 минут разговора вы получаете статью о своей работе и ТЗ на лендинг. Запишитесь на консультацию.">
+<meta name="keywords" content="интервью для экспертов, упаковка экспертности, ТЗ на лендинг, уникальное торговое предложение эксперта">
 <style>
-body{font-family:Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222}
-hr{border:0;border-top:1px solid #ccc;margin:24px 0}
-.sign{font-weight:bold;margin-top:32px}
+:root{--black:#111;--white:#fff;--gray:#f3f3f3;--mid:#6b6b6b;--red:#c8102e;--blue:#2f9bd8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--black);background:var(--white);line-height:1.65;font-size:18px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid #ddd}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:15px}
+.logo span{color:var(--red)}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:14px 28px;border-radius:2px;font-weight:600;font-size:16px;transition:.2s;border:0;cursor:pointer}
+.btn:hover{background:#1f82ba}
+.btn.sm{padding:10px 18px;font-size:14px}
+.btn.ghost{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+section{padding:44px 0}
+section.alt{background:var(--gray)}
+section.dark{background:var(--black);color:#fff}
+h1{font-size:clamp(34px,5.5vw,60px);line-height:1.1;font-weight:700;margin-bottom:24px}
+h2{font-size:clamp(26px,3.6vw,40px);line-height:1.2;margin-bottom:14px;font-weight:700}
+h2::after{content:"";display:block;width:48px;height:3px;background:var(--red);margin-top:14px}
+p{margin-bottom:8px;max-width:720px}
+.grid2{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+.sub{font-size:20px;color:#333}
+.note{font-size:14px;color:var(--mid);margin-top:7px}
+.facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;list-style:none}
+.facts li{border-top:2px solid var(--black);padding-top:10px;font-size:15px;flex:1 1 180px}
+.ph{position:relative;margin:0;background:repeating-linear-gradient(45deg,#eee,#eee 10px,#e6e6e6 10px,#e6e6e6 20px);border:1px dashed #999;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mid);font-size:14px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph figcaption{padding:16px}
+.ph.portrait{aspect-ratio:4/5}
+.ph.wide{aspect-ratio:2/1}
+.ph:has(img){border:0}
+.ph:has(img) figcaption{display:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px}
+.card{background:#fff;padding:12px;border:1px solid #ddd;border-top:3px solid var(--black)}
+.card .n{color:var(--red);font-weight:700;font-size:28px;display:block;margin-bottom:8px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:16px;margin:0}
+.quote{border:2px solid var(--red);padding:14px;font-size:24px;line-height:1.35;background:#fff}
+.quote small{display:block;font-size:14px;color:var(--mid);margin-top:10px}
+.quote.plain{border:0;border-left:3px solid var(--red);padding:8px 24px;background:transparent;max-width:720px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;align-items:center}
+.scheme{padding:12px;background:#fff;border:1px solid #ddd}
+.scheme svg{width:100%;height:90px}
+.scheme b{display:block;margin-top:8px}
+.tip{background:#fff;border-left:3px solid var(--blue);padding:8px 10px;margin:12px 0;max-width:720px;font-size:16px}
+ul.clean{list-style:none;margin:0 0 20px}
+ul.clean li{padding:4px 0 4px 26px;position:relative;max-width:720px}
+ul.clean li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:2px;background:var(--red)}
+.cta{margin-top:14px}
+.tl{list-style:none;border-left:2px solid var(--black);margin:14px 0 0 8px;max-width:720px}
+.tl li{position:relative;padding:0 0 14px 28px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--red)}
+.tl b{display:block}
+.htl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:32px;position:relative}
+.htl::before{content:"";position:absolute;top:6px;left:0;right:0;height:2px;background:var(--black)}
+.htl div{padding:28px 14px 0 0;position:relative;font-size:16px}
+.htl div::before{content:"";position:absolute;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--red)}
+.htl b{display:block;margin-bottom:4px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:24px 0}
+.stat{border-top:3px solid var(--black);padding-top:10px}
+.stat b{font-size:40px;display:block;line-height:1.1}
+.stat span{font-size:14px;color:var(--mid)}
+.price{border:2px solid var(--black);padding:12px 14px;max-width:720px;margin:14px 0;background:#fff}
+.price b{font-size:32px}
+details{border-bottom:1px solid #ccc;max-width:760px}
+summary{cursor:pointer;padding:9px 28px 9px 0;font-weight:600;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;color:var(--red);font-size:24px;top:12px}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:8px}
+.dark .btn{background:var(--red)}
+.dark .btn:hover{background:#a00d25}
+.dark p{color:#ddd}
+footer{background:#000;color:#aaa;padding:24px 0;font-size:14px}
+footer a{color:#fff}
+footer p{max-width:none}
+@media(max-width:800px){body{font-size:17px}section{padding:28px 0}.grid2,.two{grid-template-columns:1fr}.logo{font-size:13px}}
 </style>
 </head>
 <body>
-<p>Приглашаю Вас на глубинное онлайн интервью для экспертов🎤:<br>
-за 60–90 минут живого онлайн разговора Вашу экспертность я превращу в статью о Вас и Вашем проекте 🤩 и напишу эскиз ТЗ на Ваш новый лендинг💻.</p>
-<p>До 15 декабря я собираю кейсы и приглашаю участников за честный отзыв или пост о полученном опыте в интервью в ТГ стори с упоминанием моего контакта или в твоем канале или группе.</p>
-<hr>
-<p>У Вас брали когда-нибудь интервью?</p>
-<p>Если еще нет - приходите, станем первооткрывателями.</p>
-<p>😀Если тебе стало интересно - напишите удобные даты и время для интервью</p>
-<p class="sign">Наталия Кажарова</p>
+<header><div class="wrap"><div class="logo">Наталия <span>Кажарова</span></div><a class="btn sm" href="https://t.me/veselovalife?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E">Записаться на консультацию</a></div></header>
+
+<section><div class="wrap grid2">
+<div>
+<h1>Экспертность есть. Осталось сделать её видимой</h1>
+<p class="sub">Глубинное интервью с Наталией Кажаровой: живой разговор, после которого у Вас есть статья о вашей работе и техническое задание на лендинг.</p>
+<a class="btn" href="https://t.me/veselovalife?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E">Записаться на консультацию</a>
+<p class="note">Начать можно с одного сообщения в мессенджер. Формат и стоимость первичной консультации: 15 минут и 0 ₽.</p>
+<ul class="facts"><li>250+ прямых эфиров в формате интервью</li><li>Психолог по образованию, маркетолог</li><li>Интервью, статья и ТЗ на лендинг: три результата из одного разговора</li></ul>
+</div>
+<figure class="ph portrait"><img src="img/portrait.jpg" alt="Наталия Кажарова в белой рубашке" loading="lazy" onerror="this.remove()"><figcaption>Портрет: img/portrait.jpg</figcaption></figure>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Знакомо?</h2>
+<div class="cards">
+<div class="card"><p>У Вас много наработок и опыта, а коротко рассказать, чем вы отличаетесь, не получается.</p></div>
+<div class="card"><p>Вы месяцами собираете материал, останавливаетесь, возвращаетесь к нему заново.</p></div>
+<div class="card"><p>Вы стоите на развилке: делать сайт или нет?</p></div>
+</div>
+<div class="two">
+<div class="quote">«Я задолбалась стоять на месте»<small>Участница пилотного интервью</small></div>
+<figure class="ph wide"><img src="img/rails.jpg" alt="Развилка железнодорожных путей" loading="lazy" onerror="this.remove()"><figcaption>Развилка путей: img/rails.jpg</figcaption></figure>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Дело не в том, что вам нечего сказать</h2>
+<p>Чаще всего мы остаёмся со своими размышлениями один на один. Запишите свою услугу, придумайте оффер, соберите структуру — и вы ходите по кругу. Свои слепые пятна сами себе не покажешь.</p>
+<p>Шаблоны и нейросети дают структуру, но в ней нет Вас. Текст звучит чужим голосом, и клиент это чувствует. Одна из участниц сказала об этом так: никакой проект не существует без человека.</p>
+<p>Нужен тот, кто задаст точные вопросы и поможет услышать собственный голос.</p>
+<div class="two">
+<div class="scheme"><svg viewBox="0 0 300 90"><ellipse cx="150" cy="45" rx="60" ry="28" fill="none" stroke="#111" stroke-width="3"/><circle cx="150" cy="17" r="6" fill="#c8102e"/></svg><b>Самостоятельно - по кругу</b></div>
+<div class="scheme"><svg viewBox="0 0 300 90"><line x1="20" y1="45" x2="270" y2="45" stroke="#111" stroke-width="3"/><circle cx="20" cy="45" r="6" fill="#111"/><circle cx="150" cy="45" r="6" fill="#2f9bd8"/><circle cx="270" cy="45" r="6" fill="#c8102e"/></svg><b>В диалоге — по прямой</b></div>
+</div>
+<a class="btn ghost" href="https://t.me/veselovalife?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E">Обсудить мою ситуацию</a>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Интервью, а не «распаковка личности»</h2>
+<p>Я не копаюсь в вашей личности. Мы уточняем суть вашего уникального торгового предложения, то есть того, чем вы отличаетесь и что это даёт клиенту, делаем её компактной и находим в ней Вас.</p>
+<p>Я называю это интервидением: моё экспертное видение через тщательно подобранные вопросы. Человек приходит с вопросом «кто я, где я, какой я и мой продукт» и в разговоре находит ответ.</p>
+<p>Лендинг при этом работает как одежда: образ, который подходит именно вам сегодня, а не шаблон из каталога.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Одно интервью — три результата</h2>
+<div class="cards">
+<div class="card"><span class="n">01</span><h3>Интервью</h3><p>Живая беседа с расшифровкой и записью: её можно перечитать и пересмотреть.</p></div>
+<div class="card"><span class="n">02</span><h3>Статья о вашей работе</h3><p>Почти журнальная. Её можно разместить в блоге или на Дзен.</p></div>
+<div class="card"><span class="n">03</span><h3>ТЗ на лендинг</h3><p>Если у Вас пока нет сайта, вы получите задание для разработчика на лендинг.</p></div>
+</div>
+<p style="margin-top:24px"><b>Дополнительная услуга:</b> визуализация лендинга</p>
+<div class="tip"><b>Какую работу я делаю за Вас:</b> живой разговор, статья, ТЗ на сайт, помощь с формулировками, следующие шаги и подрядчики, которые могут ускорить выход из тени.</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Наталия Кажарова. Интервьюер, маркетолог, психолог</h2>
+<div class="grid2">
+<div>
+<p>Больше 250 прямых эфиров в формате интервью и телемагазина и подкасты — с косметологами, врачами эстетической медицины и экспертами из бьюти-сферы. Я люблю глубокие разговоры. Умею превращать длинные формулировки в короткую суть и переводить с профессионального языка на человеческий и обратно, практически в любой области.</p>
+<p>Моя суперсила — умение быстро собрать большой объём информации, пропустить её через свой опыт и дать живой отклик.</p>
+<div class="quote plain">«Для меня интервью — это способ сфокусироваться на сути и передать её широкой аудитории».</div>
+</div>
+<figure class="ph portrait"><img src="img/about.jpg" alt="Наталия Кажарова" loading="lazy" onerror="this.remove()"><figcaption>Фото: img/about.jpg</figcaption></figure>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Как устроен проект?</h2>
+<ol class="tl">
+<li><b>🗓 Договариваемся</b>О дате и времени.</li>
+<li><b>🎤 Разговор</b>От 60 до 90 минут, вопросы подобраны лично для Вас.</li>
+<li><b>📝 Расшифровка и анализ</b>ИИ-помощник помогает, суть остаётся за моим откликом.</li>
+<li><b>📄 Материалы у Вас</b>Запись, статья и ТЗ на лендинг.</li>
+</ol>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Начните с консультации</h2>
+<p>Консультация — это первый короткий разговор, на котором вы расскажете о своей ситуации, а мы вместе решим, подходит ли вам формат интервью.</p>
+<p>Первичная консультация: 15 минут, 0 ₽.</p>
+<div class="price"><p style="margin:0 0 6px">До 15 декабря 2026: онлайн-интервью + статья + эскиз ТЗ на лендинг</p><b><s style="color:#6b6b6b;font-weight:400;margin-right:8px">14 900 ₽</s>4 900 ₽</b></div>
+<a class="btn" href="https://t.me/veselovalife?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E">Записаться на консультацию</a>
+</div></section>
+
+
+
+
+
+<section><div class="wrap">
+<h2>Кому подходит. И чего я не делаю</h2>
+<p>Подходит экспертам из любой области, кто оказывает услуги или продаёт продукты и готов предъявляться. Это услуга «для смелых». Не нужно рассказывать ничего лишнего: когда встречаются два профессионала, достаточно открытости.</p>
+<p><b>Чего я не делаю:</b></p>
+<ul class="clean">
+<li>Это не терапия и не «распаковка личности».</li>
+<li>Моя задача — сборка, упаковка и оформление. Продвижение сайта и продажи — следующий этап, и я не обещаю, что клиенты придут сразу после лендинга.</li>
+<li>Я не гарантирую результат. Я помогаю прояснить суть и сделать первый шаг.</li>
+</ul>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Вопросы, которые Вы, возможно, хотите задать</h2>
+<details><summary>Это терапия?</summary><p>Нет. Я внимательна и с психологической стороны, но это не терапевтический контекст.</p></details>
+<details><summary>Придётся рассказывать очень личное?</summary><p>Нет. Достаточно профессиональной открытости.</p></details>
+<details><summary>У меня нет сайта. Что делать?</summary><p>Вы получите техническое задание на одностраничный лендинг.</p></details>
+<details><summary>А если сайт уже есть?</summary><p>Вы получите альтернативное видение своего позиционирования.</p></details>
+<details><summary>Я пока не знаю, кто я как эксперт.</summary><p>С этим вопросом чаще всего и приходят.</p></details>
+<details><summary>Зачем здесь ИИ?</summary><p>Он помогает с расшифровкой и анализом. Суть и отбор — мой отклик и опыт.</p></details>
+<details><summary>Что с конфиденциальностью? Опубликуете ли вы моё интервью?</summary><p>Всё конфиденциально: запись, текст статьи и ТЗ на лендинг. Публикация — только с вашего согласия.</p></details>
+<details><summary>Сколько это стоит?</summary><p>Первичная консультация — 15 минут, 0 ₽. До 15 декабря 2026 онлайн-интервью + статья + эскиз ТЗ на лендинг — <s>14 900 ₽</s> 4 900 ₽.</p></details>
+
+<details><summary>Как записаться?</summary><p>Написать в Telegram одно сообщение мне @veselovalife.</p></details>
+<div class="cta"><a class="btn" href="https://t.me/veselovalife?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E">Записаться на консультацию</a></div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+<h2>Давайте посмотрим? что у Вас уже есть</h2>
+<p>Вы можете ещё полгода собирать материал в одиночку. А можете написать одно сообщение и начать с разговора.</p>
+<p>Будьте собой. Это не собеседование.</p>
+</div></section>
+
+<footer><div class="wrap">
+<p>Наталия Кажарова · Telegram: <a href="https://t.me/veselovalife?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E">@veselovalife</a></p>
+</div></footer>
 </body>
 </html>
