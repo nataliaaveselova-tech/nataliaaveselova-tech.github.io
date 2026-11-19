@@ -1,0 +1,44 @@
+</div>
+              
+              <!-- Скрипт живого поиска -->
+              <script>
+                  document.getElementById('searchInput').addEventListener('input', function() {
+                      const filter = this.value.toLowerCase();
+                      const listItems = document.querySelectorAll('#pageList li');
+                      let visibleCount = 0;
+                      
+                      listItems.forEach(item => {
+                          // Ищем совпадения по всему тексту внутри <li> (название + путь)
+                          const text = item.textContent.toLowerCase();
+                          if (text.includes(filter)) {
+                              item.style.display = '';
+                              visibleCount++;
+                          } else {
+                              item.style.display = 'none';
+                          }
+                      });
+                      
+                      document.getElementById('emptyMessage').style.display = visibleCount === 0 ? 'block' : 'none';
+                  });
+              </script>
+          </body>
+          </html>
+          EOF
+
+          # --- 2. Генерация sitemap.xml ---
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+          
+          find . -name "*.html" -not -path "./.git/*" | sort | while read file; do
+            clean_path=${file#./}
+            echo "  <url><loc>https://nataliaaveselova-tech.github.io/${clean_path}</loc></url>" >> sitemap.xml
+          done
+          echo '</urlset>' >> sitemap.xml
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add projects.html sitemap.xml
+          # Коммитим только если есть изменения
+          git diff --staged --quiet || (git commit -m "Auto-update projects.html and sitemap.xml" && git push)
