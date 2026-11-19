@@ -1,0 +1,114 @@
+name: Generate Projects, Sitemap and llms.txt
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate files
+        run: |
+          # --- 1. Генерация projects.html с поиском по названиям ---
+          echo '<!DOCTYPE html>' > projects.html
+          echo '<html lang="ru">' >> projects.html
+          echo '<head>' >> projects.html
+          echo '    <meta charset="UTF-8">' >> projects.html
+          echo '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' >> projects.html
+          echo '    <title>Каталог страниц</title>' >> projects.html
+          echo '    <link rel="stylesheet" href="/css/style.css">' >> projects.html
+          echo '    <style>' >> projects.html
+          echo '        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 20px; }' >> projects.html
+          echo '        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }' >> projects.html
+          echo '        h1 { border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-top: 0; }' >> projects.html
+          echo '        input[type="text"] { width: 100%; padding: 12px 15px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s; }' >> projects.html
+          echo '        input[type="text"]:focus { outline: none; border-color: #0366d6; }' >> projects.html
+          echo '        ul { list-style: none; padding: 0; }' >> projects.html
+          echo '        li { margin-bottom: 12px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }' >> projects.html
+          echo '        li:last-child { border-bottom: none; }' >> projects.html
+          echo '        a { color: #0366d6; text-decoration: none; font-weight: 500; font-size: 18px; }' >> projects.html
+          echo '        a:hover { text-decoration: underline; }' >> projects.html
+          echo '        .file-path { display: block; font-size: 13px; color: #888; margin-top: 4px; font-family: monospace; }' >> projects.html
+          echo '        .back-link { display: inline-block; margin-top: 20px; padding: 10px 15px; background-color: #f1f8ff; border-radius: 5px; text-decoration: none; color: #0366d6; font-weight: normal; font-size: 16px; }' >> projects.html
+          echo '        .back-link:hover { background-color: #e1f0ff; text-decoration: none; }' >> projects.html
+          echo '        .empty-message { color: #999; font-style: italic; display: none; margin-top: 20px; text-align: center; }' >> projects.html
+          echo '    </style>' >> projects.html
+          echo '</head>' >> projects.html
+          echo '<body>' >> projects.html
+          echo '    <div class="container">' >> projects.html
+          echo '        <h1>Каталог страниц</h1>' >> projects.html
+          echo '        <input type="text" id="searchInput" placeholder="Поиск по названию статьи...">' >> projects.html
+          echo '        <ul id="pageList">' >> projects.html
+          
+          find . -name "*.html" -not -path "./.git/*" -not -name "index.html" -not -name "projects.html" -not -name "404.html" | sort | while read file; do
+            clean_path=${file#./}
+            title=$(grep -oP '(?<=<title>)[^<]+' "$file" | head -1 | tr -d '\n\r')
+            if [ -z "$title" ]; then
+              title="Без названия"
+            fi
+            echo "            <li><a href=\"/$clean_path\">$title</a><span class=\"file-path\">$clean_path</span></li>" >> projects.html
+          done
+          
+          echo '        </ul>' >> projects.html
+          echo '        <p id="emptyMessage" class="empty-message">По вашему запросу ничего не найдено.</p>' >> projects.html
+          echo '        <a href="/" class="back-link">← Вернуться на главную</a>' >> projects.html
+          echo '    </div>' >> projects.html
+          echo '    <script>' >> projects.html
+          echo '        document.getElementById("searchInput").addEventListener("input", function() {' >> projects.html
+          echo '            const filter = this.value.toLowerCase();' >> projects.html
+          echo '            const listItems = document.querySelectorAll("#pageList li");' >> projects.html
+          echo '            let visibleCount = 0;' >> projects.html
+          echo '            listItems.forEach(item => {' >> projects.html
+          echo '                const text = item.textContent.toLowerCase();' >> projects.html
+          echo '                if (text.includes(filter)) {' >> projects.html
+          echo '                    item.style.display = "";' >> projects.html
+          echo '                    visibleCount++;' >> projects.html
+          echo '                } else {' >> projects.html
+          echo '                    item.style.display = "none";' >> projects.html
+          echo '                }' >> projects.html
+          echo '            });' >> projects.html
+          echo '            document.getElementById("emptyMessage").style.display = visibleCount === 0 ? "block" : "none";' >> projects.html
+          echo '        });' >> projects.html
+          echo '    </script>' >> projects.html
+          echo '</body>' >> projects.html
+          echo '</html>' >> projects.html
+
+          # --- 2. Генерация sitemap.xml ---
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+          
+          find . -name "*.html" -not -path "./.git/*" | sort | while read file; do
+            clean_path=${file#./}
+            echo "  <url><loc>https://nataliaaveselova-tech.github.io/${clean_path}</loc></url>" >> sitemap.xml
+          done
+          echo '</urlset>' >> sitemap.xml
+
+          # --- 3. Генерация llms.txt ---
+          echo '# Наталья Кажарова: интервью и ТЗ на лендинг' > llms.txt
+          echo '' >> llms.txt
+          echo '> Помогаю экспертам превращать интервью в готовые статьи и технические задания для создания лендингов.' >> llms.txt
+          echo '' >> llms.txt
+          echo '## Основные страницы' >> llms.txt
+          echo '- [Главная](https://nataliaaveselova-tech.github.io/index.html): О Наталье и услугах' >> llms.txt
+          echo '- [Все проекты](https://nataliaaveselova-tech.github.io/projects.html): Каталог статей и кейсов' >> llms.txt
+          echo '' >> llms.txt
+          echo '## Все материалы' >> llms.txt
+          
+          find . -name "*.html" -not -path "./.git/*" -not -name "index.html" -not -name "projects.html" -not -name "404.html" | sort | while read file; do
+            clean_path=${file#./}
+            title=$(grep -oP '(?<=<title>)[^<]+' "$file" | head -1 | tr -d '\n\r')
+            if [ -z "$title" ]; then
+              title="Без названия"
+            fi
+            echo "- [$title](https://nataliaaveselova-tech.github.io/$clean_path)" >> llms.txt
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add projects.html sitemap.xml llms.txt
+          git diff --staged --quiet || (git commit -m "Auto-update projects, sitemap and llms.txt" && git push)
