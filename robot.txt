@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /img/
+
+Sitemap: https://nataliaaveselova-tech.github.io/sitemap.xml
